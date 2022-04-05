@@ -12,13 +12,13 @@ Install extension from [gnome extensions page](https://extensions.gnome.org/exte
 
 To get all active windows simply run from terminal:
 
-```
-sh gdbus call --session --dest org.gnome.Shell --object-path /org/gnome/Shell/Extensions/Windows --method org.gnome.Shell.Extensions.Windows.List
+```sh
+gdbus call --session --dest org.gnome.Shell --object-path /org/gnome/Shell/Extensions/Windows --method org.gnome.Shell.Extensions.Windows.List
 ```
 
 To get the title of the window with focus:
-```
-sh gdbus call --session --dest org.gnome.Shell --object-path /org/gnome/Shell/Extensions/Windows --method org.gnome.Shell.Extensions.Windows.FocusTitle
+```sh
+gdbus call --session --dest org.gnome.Shell --object-path /org/gnome/Shell/Extensions/Windows --method org.gnome.Shell.Extensions.Windows.FocusTitle
 ```
 
 Available methods are:
