@@ -12,6 +12,8 @@ Credit to [dceee](https://github.com/dceee) for providing example code in [this 
 
 Install extension from [gnome extensions page](https://extensions.gnome.org/extension/4724/window-calls/).
 
+To manually install, copy `extension.js` and `metadata.json` into a folder by (exactly!! Gnome will not load the extension if the folder name does not match the uuid from the metadata) name of `window-calls-extended@hseliger.eu` under your `~/.local/share/gnome-shell/extensions` folder.
+
 To get all active windows simply run from terminal:
 
 ```sh
