@@ -1,4 +1,6 @@
-# Window Calls
+# Window Calls extended version
+
+This extension is based on teh "Window Calls" extension by ickyicky (https://github.com/ickyicky), extended by a few methods to provide the focused window's title, window class, and pid.
 
 This extension allows you to list current windows with some of their properties from command line, super usefull for Wayland to get current focused window.
 
@@ -10,6 +12,26 @@ Install extension from [gnome extensions page](https://extensions.gnome.org/exte
 
 To get all active windows simply run from terminal:
 
-```sh
-gdbus call --session --dest org.gnome.Shell --object-path /org/gnome/Shell/Extensions/Windows --method org.gnome.Shell.Extensions.Windows.List
+```
+sh gdbus call --session --dest org.gnome.Shell --object-path /org/gnome/Shell/Extensions/Windows --method org.gnome.Shell.Extensions.Windows.List
+```
+
+To get the title of the window with focus:
+```
+sh gdbus call --session --dest org.gnome.Shell --object-path /org/gnome/Shell/Extensions/Windows --method org.gnome.Shell.Extensions.Windows.FocusTitle
+```
+
+Available methods are:
+* org.gnome.Shell.Extensions.Windows.List
+* org.gnome.Shell.Extensions.Windows.FocusTitle
+* org.gnome.Shell.Extensions.Windows.FocusPID
+* org.gnome.Shell.Extensions.Windows.FocusClass
+
+## Using from C++
+If using from C++, it requires the dbus-1 library. Parameters for the call to `dbus_message_new_method_call` would be
+```
+#define DB_INTERFACE    "org.gnome.Shell.Extensions.Windows"
+#define DB_DESTINATION  "org.gnome.Shell"
+#define DB_PATH         "/org/gnome/Shell/Extensions/Windows"
+#define DB_METHOD       "List"
 ```
