@@ -15,19 +15,19 @@ Install extension from [gnome extensions page](https://extensions.gnome.org/exte
 To get all active windows simply run from terminal:
 
 ```sh
-gdbus call --session --dest org.gnome.Shell --object-path /org/gnome/Shell/Extensions/Windows --method org.gnome.Shell.Extensions.Windows.List
+gdbus call --session --dest org.gnome.Shell --object-path /org/gnome/Shell/Extensions/WindowsExt --method org.gnome.Shell.Extensions.WindowsExt.List
 ```
 
 To get the title of the window with focus:
 ```sh
-gdbus call --session --dest org.gnome.Shell --object-path /org/gnome/Shell/Extensions/Windows --method org.gnome.Shell.Extensions.Windows.FocusTitle
+gdbus call --session --dest org.gnome.Shell --object-path /org/gnome/Shell/Extensions/WindowsExt --method org.gnome.Shell.Extensions.WindowsExt.FocusTitle
 ```
 
 Available methods are:
-* org.gnome.Shell.Extensions.Windows.List
-* org.gnome.Shell.Extensions.Windows.FocusTitle
-* org.gnome.Shell.Extensions.Windows.FocusPID
-* org.gnome.Shell.Extensions.Windows.FocusClass
+* org.gnome.Shell.Extensions.WindowsExt.List
+* org.gnome.Shell.Extensions.WindowsExt.FocusTitle
+* org.gnome.Shell.Extensions.WindowsExt.FocusPID
+* org.gnome.Shell.Extensions.WindowsExt.FocusClass
 
 ## Using from C++
 If using from C++, it requires the dbus-1 library. Parameters for the call to `dbus_message_new_method_call` would be
