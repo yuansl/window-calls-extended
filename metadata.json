@@ -1,10 +1,10 @@
 {
-  "name": "Window Calls",
-  "description": "Add new dbus call for windows to get windows list and some of theirs properties",
-  "uuid": "window-calls@domandoman.xyz",
+  "name": "Window Calls Extended",
+  "description": "Add new dbus call for windows to get windows list and some of theirs properties, plus details on window under foxcus.",
+  "uuid": "window-calls-extened@hseliger.eu",
   "shell-version": [
     "41"
   ],
   "version": 1.1,
-  "url": "https://github.com/ickyicky/window-calls"
+  "url": "https://github.com/hseliger/window-calls-extended"
 }
