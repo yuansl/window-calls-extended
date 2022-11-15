@@ -4,7 +4,8 @@
   "uuid": "window-calls-extended@hseliger.eu",
   "shell-version": [
     "41",
-    "42"
+    "42",
+    "43"
   ],
   "version": 2,
   "url": "https://github.com/hseliger/window-calls-extended"
