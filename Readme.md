@@ -6,6 +6,9 @@ This extension allows you to list current windows with some of their properties 
 
 Credit to [dceee](https://github.com/dceee) for providing example code in [this discussion](https://gist.github.com/rbreaves/257c3edfa301786e66e964d7ac036269).
 
+## ATTENTION
+This version has been updated to the new import methods for Gnome 45. So my assumption is it will not work anymore with older Gnome versions (but having upgrade to 45, I cannot test it anymore). So in case you want to use for an older Gnome, pull version 4 of this extension from Github.
+
 ## Usage
 
 Install extension from [gnome extensions page](https://extensions.gnome.org/extension/4974/window-calls-extended/).
