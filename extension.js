@@ -17,14 +17,17 @@
  */
 
 // Created: 2022-04-05T09:02:24+02:00 by Hendrik G. Seliger (github@hseliger.eu)
-// Last changes: 2022-04-05T13:09:46+02:00 by Hendrik G. Seliger (github@hseliger.eu)
+// Last changes: 2023-11-10T17:16:43+01:00 by Hendrik G. Seliger (github@hseliger.eu)
 
 // Based on the initial version by ickyicky (https://github.com/ickyicky),
 // extended by a few methods to provide the focused window's title, window class, and pid.
 
+// Updated to use ECMA Script Module (ESM) for Gnome 45
+// See: https://gjs.guide/extensions/upgrading/gnome-shell-45.html
+
 /* exported init */
 
-const { Gio } = imports.gi;
+import Gio from 'gi://Gio';
 
 const MR_DBUS_IFACE = `
 <node>
@@ -44,7 +47,7 @@ const MR_DBUS_IFACE = `
     </interface>
 </node>`;
 
-class Extension {
+export default class WCExtension {
     enable() {
         this._dbus = Gio.DBusExportedObject.wrapJSObject(MR_DBUS_IFACE, this);
         this._dbus.export(Gio.DBus.session, '/org/gnome/Shell/Extensions/WindowsExt');
@@ -97,5 +100,5 @@ class Extension {
 }
 
 function init() {
-    return new Extension();
+    return new WCExtension();
 }
