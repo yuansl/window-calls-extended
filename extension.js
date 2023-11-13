@@ -17,7 +17,7 @@
  */
 
 // Created: 2022-04-05T09:02:24+02:00 by Hendrik G. Seliger (github@hseliger.eu)
-// Last changes: 2023-11-10T17:16:43+01:00 by Hendrik G. Seliger (github@hseliger.eu)
+// Last changes: 2023-11-13T22:28:33+01:00 by Hendrik G. Seliger (github@hseliger.eu)
 
 // Based on the initial version by ickyicky (https://github.com/ickyicky),
 // extended by a few methods to provide the focused window's title, window class, and pid.
@@ -97,8 +97,4 @@ export default class WCExtension {
             }
             return "";
         }
-}
-
-function init() {
-    return new WCExtension();
 }
