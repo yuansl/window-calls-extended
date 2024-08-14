@@ -3,8 +3,10 @@
   "description": "Add new dbus call for windows to get windows list and some of theirs properties, plus details on window under focus.",
   "uuid": "window-calls-extended@hseliger.eu",
   "shell-version": [
-    "45"
+    "45",
+    "46",
+    "47"
   ],
-  "version": 6,
+  "version": 7,
   "url": "https://github.com/hseliger/window-calls-extended"
 }
