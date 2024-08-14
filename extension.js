@@ -41,6 +41,9 @@ const MR_DBUS_IFACE = `
         <method name="FocusPID">
             <arg type="s" direction="out" />
         </method>
+        <method name="FocusID">
+            <arg type="s" direction="out" />
+        </method>
         <method name="FocusClass">
             <arg type="s" direction="out" />
         </method>
@@ -68,9 +71,9 @@ export default class WCExtension {
         let win = global.get_window_actors()
             .map(a => a.meta_window)
             .map(w => ({ focus: w.has_focus(), title: w.get_title() }));
-        for (let [_ignore , aWindow] of win.entries()) {
-            let [focus,theTitle] = Object.entries(aWindow);
-            if (focus[1] == true )
+        for (let [_ignore, aWindow] of win.entries()) {
+            let [focus, theTitle] = Object.entries(aWindow);
+            if (focus[1] == true)
                 return theTitle[1];
         }
         return "";
@@ -79,22 +82,33 @@ export default class WCExtension {
         let win = global.get_window_actors()
             .map(a => a.meta_window)
             .map(w => ({ focus: w.has_focus(), pid: w.get_pid() }));
-            for (let [_ignore , aWindow] of win.entries()) {
-                let [focus,thePID] = Object.entries(aWindow);
-                if (focus[1] == true )
-                    return ""+thePID[1]; // Turn number into string
-            }
-            return "";
+        for (let [_ignore, aWindow] of win.entries()) {
+            let [focus, thePID] = Object.entries(aWindow);
+            if (focus[1] == true)
+                return "" + thePID[1]; // Turn number into string
         }
+        return "";
+    }
+    FocusID() {
+        let win = global.get_window_actors()
+            .map(a => a.meta_window)
+            .map(w => ({ focus: w.has_focus(), id: w.get_id() }));
+        for (let [_ignore, aWindow] of win.entries()) {
+            let [focus, theID] = Object.entries(aWindow);
+            if (focus[1] == true)
+                return "" + theID[1]; // Turn number into string
+        }
+        return "";
+    }
     FocusClass() {
         let win = global.get_window_actors()
             .map(a => a.meta_window)
             .map(w => ({ focus: w.has_focus(), class: w.get_wm_class() }));
-            for (let [_ignore , aWindow] of win.entries()) {
-                let [focus,theClass] = Object.entries(aWindow);
-                if (focus[1] == true )
-                    return theClass[1];
-            }
-            return "";
+        for (let [_ignore, aWindow] of win.entries()) {
+            let [focus, theClass] = Object.entries(aWindow);
+            if (focus[1] == true)
+                return theClass[1];
         }
+        return "";
+    }
 }
