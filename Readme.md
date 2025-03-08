@@ -1,6 +1,6 @@
 # Window Calls extended version
 
-This extension is based on teh "Window Calls" extension by ickyicky (https://github.com/ickyicky), extended by a few methods to provide the focused window's title, window class, and pid.
+This extension is based on the "Window Calls" extension by ickyicky (https://github.com/ickyicky), extended by a few methods to provide the focused window's title, window class, and pid.
 
 This extension allows you to list current windows with some of their properties from command line, super usefull for Wayland to get current focused window. The additional information on focused window are also for use with Wayland and espanso (https://github.com/federico-terzi/espanso), which – hopefully – jointly with this extension will be able to provide app-specific keyboard expansions.
 
