@@ -1,6 +1,6 @@
 {
   "name": "Window Calls Extended",
-  "description": "Add new dbus call for windows to get windows list and some of theirs properties, plus details on window under focus.",
+  "description": "Add new dbus call for windows to get windows list and some of theirs properties, plus details on window under focus. Can be used by tools such as espanso.",
   "uuid": "window-calls-extended@hseliger.eu",
   "shell-version": [
     "45",
