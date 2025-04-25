@@ -48,6 +48,10 @@ const MR_DBUS_IFACE = `
             <arg type="s" direction="out" />
         </method>
 
+        <method name="RaiseEmacsWindow">
+            <arg type="s" direction="out" />
+        </method>
+
     </interface>
 </node>`;
 
