@@ -28,7 +28,7 @@
 /* exported init */
 
 import Gio from 'gi://Gio';
-
+import Mtk from 'gi://Mtk';
 const MR_DBUS_IFACE = `
 <node>
     <interface name="org.gnome.Shell.Extensions.WindowsExt">
