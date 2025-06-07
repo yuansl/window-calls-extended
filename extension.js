@@ -48,8 +48,8 @@ const MR_DBUS_IFACE = `
             <arg type="s" direction="out" />
         </method>
 
-        <method name="RaiseEmacsWindow">
-            <arg type="s" direction="out" />
+        <method name="RaiseWindow">
+            <arg type="s" direction="in" />
         </method>
 
     </interface>
@@ -131,10 +131,10 @@ export default class WCExtension {
         }
     }
 
-    RaiseEmacsWindow() {
+    RaiseWindow(window) {
 	let win = global.get_window_actors()
             .map(a => a.meta_window)
-            .filter(w => w.get_wm_class() === 'emacs');
+            .filter(w => w.get_wm_class() === window);
         for (let [_ignore , window] of win.entries()) {
 	    this._raise_window(window);
 	}
